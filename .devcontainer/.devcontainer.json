@@ -1,0 +1,10 @@
+{
+    "name": "Angular Dev Container",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "angular",
+    "workspaceFolder": "/app",
+    "forwardPorts": [4201],
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    }
+  }

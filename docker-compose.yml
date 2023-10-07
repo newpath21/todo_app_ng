@@ -1,0 +1,20 @@
+version: '3'
+services:
+  ###
+  #
+  ###
+  todo_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4201:4200/tcp"
+    tty: true
+    volumes:
+      # Mount the root folder that contains .git
+      - ../:/workspace:cached
+      - node_modules:/workspace/node_modules
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+volumes:
+  node_modules:
