@@ -1,20 +1,11 @@
-version: '3'
+version: '3.8'
 services:
-  ###
-  #
-  ###
-  todo_app:
+  angular:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "4201:4200/tcp"
-    tty: true
+      - "4201:4200"
     volumes:
-      # Mount the root folder that contains .git
-      - ../:/workspace:cached
-      - node_modules:/workspace/node_modules
-    command: /bin/sh -c "while sleep 1000; do :; done"
-
-volumes:
-  node_modules:
+      - .:/app
+      - /app/node_modules

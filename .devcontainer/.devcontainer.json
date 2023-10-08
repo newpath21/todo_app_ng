@@ -1,10 +1,14 @@
 {
-    "name": "Angular Dev Container",
-    "dockerComposeFile": "../docker-compose.yml",
-    "service": "angular",
-    "workspaceFolder": "/app",
-    "forwardPorts": [4201],
-    "settings": {
-      "terminal.integrated.shell.linux": "/bin/bash"
-    }
+	"name": "Angular Dev Container",
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "angular",
+	"workspaceFolder": "/app",
+  
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+	  "terminal.integrated.shell.linux": "/bin/bash"
+	},
+  
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": ["angular.ng-template"]
   }

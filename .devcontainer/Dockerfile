@@ -1,17 +1,17 @@
 FROM node:14
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /workspaces
 
 # Add Node.js to PATH
-ENV PATH /app/node_modules/.bin:$PATH
+ENV PATH /workspaces/node_modules/.bin:$PATH
 
 # Install Angular CLI globally
-RUN npm install -g @angular/cli@12
+RUN npm install -g @angular/cli@9
 
 # Install application dependencies
-COPY package.json /app/package.json
+COPY package.json /workspaces/package.json
 RUN npm install
 
 # Add the application code
-COPY . /app
+COPY . /workspaces
