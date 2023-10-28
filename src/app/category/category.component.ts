@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @Component({
   selector: 'app-category',

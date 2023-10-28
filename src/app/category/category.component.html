@@ -18,6 +18,44 @@
     </div>
 </div>
 
+<div class="row justify-content-center">
+    <div class="col-md-6 text-center">
+        <i class="fas fa-filter fa-2x"></i>
+    </div>
+</div>
+
+<div class="row justify-content-center" *ngIf="showFirstDropdown">
+    <div class="col-md-6">
+        <ng-select [items]="firstItems"
+                   bindLabel="name"
+                   placeholder="Select an item"
+                   [(ngModel)]="selectedFirstItem"
+                   (change)="onFirstSelect($event)">
+        </ng-select>
+    </div>
+</div>
+
+<!-- Second Dropdown -->
+<div class="row justify-content-center" *ngIf="showSecondDropdown">
+    <div class="col-md-6">
+        <ng-select [items]="secondItems"
+                   bindLabel="name"
+                   placeholder="Select another item"
+                   [(ngModel)]="selectedSecondItem"
+                   [searchable]="true"
+                   (change)="onSecondSelect($event)">
+        </ng-select>
+    </div>
+</div>
+
+<!-- Chip -->
+<div class="row justify-content-center" *ngIf="chipText">
+    <div class="col-md-6 text-center">
+        <span class="badge badge-primary">{{ chipText }}</span>
+    </div>
+</div>
+
+
 <div class="row categories-list">
     <div class="col-md-3">
         <div class="card drop-shadow">

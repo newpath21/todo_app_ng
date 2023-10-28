@@ -35,3 +35,8 @@
 .categories-list .card:hover .cat-tools {
     display: inline;
 }
+
+.badge {
+    padding: 0.5em 1em;
+    border-radius: 1em;
+  }
